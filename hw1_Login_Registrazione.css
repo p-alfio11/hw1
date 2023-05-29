@@ -1,0 +1,105 @@
+/* -----------------css per cercare di togliere lo sfondo bianco dell'autcompletamento del browser */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    background-color: transparent !important;
+    -webkit-box-shadow: none !important;
+    -webkit-text-fill-color: black !important;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, 
+  Helvetica, sans-serif;
+  background-image: url(img/Login.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+@media screen and (max-width: 200px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.Title{
+  text-align: center;
+  font-size: 30px;
+}
+#errore{
+  font-size: 1px;
+}
+
+.container{
+  width: 40%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px) saturate(180%);
+  border-radius: 60px;
+  padding: 5vh;
+}
+
+
+.log{
+  color: rgb(0, 0, 0);
+  
+  max-width: 700px;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 10px 20px;
+ 
+  font-size: 25px;
+  
+}
+ .log input{
+  
+  background: transparent;
+  margin: auto;
+  border: 0;
+  outline: none;
+  margin: 14px 10px;
+  font-size: 20px;
+  color: cac7ff;
+  width: 100%;
+  
+}
+.log input::placeholder{
+  color: rgb(30, 30, 30);
+}
+::placeholder{
+  color:cac7ff;
+}
+
+.log button{
+  border: 0;
+  margin: auto;
+  margin-bottom: 3px;
+  border-radius: 5vh;
+  width: 60px;
+  height: 60px;
+  background: #58629b;
+  cursor: pointer;
+  width: 100%;
+}
+.Title{
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px) saturate(180%); 
+  border-radius: 5vh;
+  width: auto;
+  padding: 10px;
+}
+
+
+

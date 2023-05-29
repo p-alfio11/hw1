@@ -1,0 +1,23 @@
+
+
+
+.Titolo_Modello{
+color: white;
+font-size: 28px;
+text-align: center;
+}
+.Risposta{
+   display: flex;
+   flex-direction: column;
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: 0;
+   margin-bottom: 0;
+   
+    width: 100vh;
+    height: 100vh;
+}
+.Risposta{
+height: 45px;
+width: 100%;
+}

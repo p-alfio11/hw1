@@ -1,0 +1,372 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(0,8,51,0.8),rgba(0,8,51,0.8)),url(img/SforndoRicerca.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* --------Per la NAVBAR -----------*/
+
+#menuIcon{
+    width: 60px;
+    border-radius: 190%;
+    position: fixed;
+    padding-top: 7px;
+    padding-right: 7px;
+    cursor: pointer;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom-left-radius: 100%;
+    transition: width 0.3s, height 0.3s, border-radius 0.3s;
+}
+.menu-box.open-menu{
+    width: 100%;
+    height: 100vh;
+    border-bottom-left-radius: 0;
+}
+.menu-box.open-menu ul li{
+    opacity: 1;
+    transform: translateY(0);
+    transition: trasform 0.5s, opacity 0.5s;
+    transition-delay:0.3s ;
+}
+.menu-box{
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.menu-box ul li{
+    list-style: none;
+    margin: 20px;
+    text-align:  center;
+    opacity: 0;
+    transform: translateY(30px);
+
+}
+.menu-box ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #b59c10;
+    font-size: 50px;
+    font-weight: 6000;
+    position: relative;
+    text-shadow: 0px 0px 0 red;
+    transition: text-shadow 0.5s,transform 0.5s;
+   
+}
+.menu-box ul li a :hover{
+    text-shadow: -3px 3px 0 red;
+    transform: translateY(-6px);
+
+}
+.menu-box ul li a::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    bottom: 19px;
+    right:-18px;
+    opacity: 0;
+    box-shadow: 0px 0px 0 red;
+    transition: box-shadow 0.5s;
+}
+.menu-box ul li a:hover::after{
+    opacity: 1;
+    box-shadow: -2px 2px 0 red;
+
+}
+
+
+/* --------Per il titolo -----------*/
+.Titolo{
+ text-align: center;
+ font-size: 32px;
+ color: whitesmoke;
+ margin-bottom: 12px;
+}
+.Conteiner{
+width: 100%;
+min-height: 10vh;
+padding: 5%;
+background-image: linear-gradient(rgba(0,8,51,0.9),rgba(0,8,51,0.9),url(img/background.jpg));
+background-position: center;
+background-size:cover;
+display: flex;
+box-sizing: border-box;
+
+align-items: center;
+justify-content: center;
+}
+.search{
+    height: auto;
+    max-width: 60%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+.search input{
+    background: transparent;
+    flex:1;
+    height: 60px;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: cac7ff;
+    
+}
+::placeholder{
+    color:cac7ff;
+}
+.search button img{
+    width: 25px;
+
+}
+.search button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58629b;
+    cursor: pointer;
+}
+
+/* --------Per l'aggiunta di un nuovo post */
+.upload{
+   
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px) saturate(180%);
+    border-radius: 60px;
+    
+    width:100%;
+    min-height:100vh;
+   
+    background-image: linear-gradient(rgba(0,8,51,0.8),rgba(0,8,51,0.8)),url(img/SforndoRicerca.png);
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.uploadForm{
+    width:100%;
+    min-height:70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+.uploadForm input{
+    background: transparent;
+    flex:1;
+    width: 100%;
+    height: auto;
+    max-height: 45px;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    color: cac7ff;
+    
+}
+
+.uploadForm button img{
+    width: 25px;
+}
+.uploadForm button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58629b;
+    cursor: pointer;
+}
+.uploadForm #previewImage{
+    max-width: 20vh;
+    max-height: 20vh;
+    padding: 24px 20px;
+
+}
+
+  #postForm textarea{
+    height: auto;
+    width: 100%;
+    min-height: auto;
+    background-color: transparent;
+  }
+  #imageInput{
+    min-height: 30px;
+    width: 100%;
+  }
+  #postForm{
+    width: 100%;
+    height: 100%;
+  }
+  /* --------_Home page ---------------- */
+  #homepage{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .post{
+    width: 90%;
+    height: 90%;
+  }
+  .Divisore{
+    width: 100%;
+    height: 20px;
+  }
+  .contenitoreIN{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+  }
+  .contenitoreOUT{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px) saturate(180%); 
+    border-radius: 5vh;
+    padding: 10px;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: auto;
+  }
+  .like{
+    width: 30px;
+  }
+  .ins{
+    background: transparent;
+    flex:1;
+    border: 0,5px solid white;
+    outline: none;
+    font-size: 20px;
+    color: cac7ff;
+    width: 50%;
+    height: 60%;
+    font-size: 8px;
+    margin-right: 2px;
+    margin-left: 2px;
+    
+  }
+  
+  .barra{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .DivCommenti{
+    height: 45vh;
+    width: 90%;
+    max-height: 70%;
+    overflow: scroll;
+    
+  }
+  .SpanCommenti{
+    height: auto;
+    border: 1px solid white;
+    width: 90%;
+    margin: 2px;
+  }
+
+
+
+/* ----------Footer-----------*/
+
+footer{
+  background-color: #ffffff;
+  padding: 50px 0 20px;
+}
+
+footer nav{
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  footer nav {
+    margin: 0 30px;
+  }
+}
+
+.footer-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+.footer-col{
+  padding: 0 15px;
+  height: 100%;
+}
+
+@media (max-width: 500px) {
+  .footer-col {
+    margin-bottom: 30px;
+    padding: 0;
+  }
+}
+
+footer h1{
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.footer-col strong{
+  display: flex;
+  color: #919496;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.footer-col p{
+  font-size: 18px;
+  padding: 3px 0 15px;
+  margin: 0;
+}
